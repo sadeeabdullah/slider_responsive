@@ -127,7 +127,7 @@ header .menu{
 }
 .thumbnail{
     position: absolute;
-    bottom: 50px;
+    top: 75%;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -144,11 +144,15 @@ header .menu{
     width: 0;
 }
 .thumbnail .item{
-    width: 150px;
-    height: 220px;
+    width: 130px;
+    height: 170px;
     filter: brightness(0.5);
     transition: 0.5s;
     flex-shrink: 0;
+}
+.thumbnail:hover>  .item:not(:hover){
+    filter: blur(5px);
+    transform: scale(0.9,0.9);
 }
 .thumbnail .item img{
     width: 100%;
